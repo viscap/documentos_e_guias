@@ -1,0 +1,28 @@
+O TFmini é um LIDAR de baixo custo.
+Ele possui uma faixa de operação indoor de 0.3 a 12m com resolução.
+
+Site com material sobre o Lidar.
+http://www.benewake.com/en/down.html
+
+
+Para testar no computador, é necessário utilizar um Conversor USB - TTL.
+
+Nesse link:
+
+http://blogmasterwalkershop.com.br/arduino/conversor-usb-serial-ttl-pl2303hx-instalacao-no-windows-10/
+
+é possível encontrar o driver correto para ele, pois em alguns computadores o driver padrão não é reconhecido,
+visto que alguns conversores vendidos são piratas e a fabricante original modificou o firmware original para 
+barrar eles.
+
+
+É possível realizar a integração deste sensor com a Pixhawk e utilizar ele como fonte confiável para
+estimar a altura do drone, para voos baixos. Para tal é necessário modificar o Lidar para 
+gerar na saída a distância medida no formato esperado pelo Lidar. E após montar o dispositivo no 
+drone, configurar os parâmetros para que a Pixhawk use ele. 
+
+http://ardupilot.org/copter/docs/common-benewake-tfmini-lidar.html
+
+Eu ainda não consegui realizar esse integração. Uma coisa que suspeito é que 
+a Pixhawk não consegue alimentar o TFmini corretamente, necessitando de uma fonte
+externa de energia.
